@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+tools:context=".fragment.HomeFragment">
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/main_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/bgc_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto"
+            android:text="G"
+            android:textColor="#1D641F"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/roboto"
+        android:text="Signal"
+        android:textColor="@color/black"
+        android:textSize="22dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_baseline_search_24" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_menu" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+<TextView
+    android:id="@+id/main_noChat"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="No Chats"
+    android:visibility="gone"
+    android:textSize="25sp"
+    android:layout_centerInParent="true"
+    android:textColor="#9A9999"/>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/main_recycleView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/main_toolbar"
+    android:layout_marginTop="10dp" />
+
+</RelativeLayout>
